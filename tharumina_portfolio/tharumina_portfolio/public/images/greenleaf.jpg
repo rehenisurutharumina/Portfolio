@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="gbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1f0a"/>
+      <stop offset="100%" style="stop-color:#1a3d1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#gbg)"/>
+  <rect x="0" y="0" width="800" height="70" fill="#0d2b0d" opacity="0.95"/>
+  <circle cx="60" cy="35" r="20" fill="#22c55e" opacity="0.8"/>
+  <text x="90" y="41" font-family="Arial" font-size="16" font-weight="bold" fill="#22c55e">GreenLeaf</text>
+  <rect x="600" y="18" width="80" height="32" rx="6" fill="#16a34a"/>
+  <text x="640" y="39" text-anchor="middle" font-family="Arial" font-size="12" fill="white">Get Started</text>
+  <rect x="60" y="100" width="400" height="60" rx="6" fill="none"/>
+  <text x="60" y="140" font-family="Arial" font-size="28" font-weight="bold" fill="#4ade80">Sustainable Business</text>
+  <text x="60" y="175" font-family="Arial" font-size="20" fill="#86efac">Management Platform</text>
+  <rect x="60" y="200" width="340" height="10" rx="3" fill="#166534" opacity="0.6"/>
+  <rect x="60" y="222" width="280" height="10" rx="3" fill="#166534" opacity="0.5"/>
+  <rect x="60" y="244" width="310" height="10" rx="3" fill="#166534" opacity="0.4"/>
+  <rect x="60" y="275" width="120" height="40" rx="8" fill="#16a34a"/>
+  <text x="120" y="300" text-anchor="middle" font-family="Arial" font-size="13" fill="white">Explore</text>
+  <rect x="440" y="90" width="320" height="260" rx="12" fill="#0f2e0f" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="460" y="110" width="280" height="140" rx="8" fill="#1a4a1a"/>
+  <circle cx="560" cy="165" r="35" fill="#22c55e" opacity="0.3"/>
+  <circle cx="560" cy="165" r="20" fill="#22c55e" opacity="0.6"/>
+  <rect x="460" y="265" width="130" height="8" rx="3" fill="#4ade80" opacity="0.5"/>
+  <rect x="460" y="283" width="100" height="8" rx="3" fill="#4ade80" opacity="0.3"/>
+  <text x="400" y="410" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#4ade80">GreenLeaf</text>
+  <text x="400" y="435" text-anchor="middle" font-family="Arial" font-size="12" fill="#86efac">Sustainability Platform — Replace with your screenshot</text>
+</svg>

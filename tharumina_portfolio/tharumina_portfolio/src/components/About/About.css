@@ -1,0 +1,484 @@
+.about {
+  padding: 120px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about__subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #94a3b8;
+  margin: -24px 0 56px;
+}
+
+.about__subtitle .accent  { color: #2dd4bf; font-weight: 600; }
+.about__subtitle .accent2 { color: #a78bfa; font-weight: 600; }
+
+.about__layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ── glass base ─────────────────────────────────── */
+.glass-card {
+  background: rgba(10, 18, 35, 0.8);
+  border: 1px solid rgba(45, 212, 191, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* ── Profile card ───────────────────────────────── */
+.profile-card {
+  padding: 36px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.profile-avatar-wrap {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #2dd4bf 0%, #7c3aed 100%);
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.profile-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(10, 18, 35, 0.95);
+  border: 3px solid rgba(10, 18, 35, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-avatar-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-initials {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2dd4bf, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.04em;
+}
+
+.profile-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0 0 10px;
+}
+
+.profile-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  background: rgba(45, 212, 191, 0.07);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #2dd4bf;
+  margin-bottom: 26px;
+  letter-spacing: 0.03em;
+}
+
+.profile-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2dd4bf;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.75); }
+}
+
+.profile-contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: rgba(45, 212, 191, 0.04);
+  border: 1px solid rgba(45, 212, 191, 0.09);
+  border-radius: 11px;
+  padding: 9px 13px;
+  text-align: left;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.contact-row:hover {
+  border-color: rgba(45, 212, 191, 0.22);
+  background: rgba(45, 212, 191, 0.08);
+}
+
+.contact-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(45, 212, 191, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2dd4bf;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #475569;
+  font-weight: 700;
+  margin: 0;
+}
+
+.contact-value {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  margin: 0;
+}
+
+.profile-socials {
+  display: flex;
+  gap: 11px;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(45, 212, 191, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background: rgba(45, 212, 191, 0.12);
+  color: #2dd4bf;
+  border-color: rgba(45, 212, 191, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ── Right column ───────────────────────────────── */
+.about__right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Bio ────────────────────────────────────────── */
+.bio-card {
+  padding: 30px 34px;
+  border-left: 2px solid #2dd4bf;
+  border-radius: 0 20px 20px 0;
+}
+
+.bio-text {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #94a3b8;
+  margin: 0 0 16px;
+}
+
+.bio-text:last-child { margin-bottom: 0; }
+.bio-text .accent  { color: #2dd4bf; font-weight: 600; }
+.bio-text .accent2 { color: #a78bfa; font-weight: 600; }
+
+/* ── Interests — 3 × 2 ──────────────────────────── */
+.interests-card {
+  padding: 26px 30px;
+}
+
+.card-section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2dd4bf;
+  margin: 0 0 16px;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.interest-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 14px;
+  background: rgba(45, 212, 191, 0.03);
+  border: 1px solid rgba(45, 212, 191, 0.09);
+  border-radius: 13px;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+  cursor: default;
+}
+
+.interest-item:hover {
+  border-color: rgba(45, 212, 191, 0.28);
+  background: rgba(45, 212, 191, 0.07);
+}
+
+.interest-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(45, 212, 191, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2dd4bf;
+  flex-shrink: 0;
+}
+
+.interest-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 0 0 2px;
+}
+
+.interest-sub {
+  font-size: 0.72rem;
+  color: #475569;
+  line-height: 1.35;
+}
+
+/* ── Bottom row: Education + Skills ─────────────── */
+.about__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.edu-card,
+.skills-card {
+  padding: 24px 26px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2dd4bf;
+  flex-shrink: 0;
+}
+
+.card-header-sub {
+  font-size: 0.66rem;
+  color: #3d5068;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 2px 0 0;
+}
+
+/* Education timeline */
+.edu-entry {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 16px;
+}
+
+.edu-entry:last-child { margin-bottom: 0; }
+
+.edu-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.edu-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #475569;
+  flex-shrink: 0;
+}
+
+.edu-dot--active {
+  background: #2dd4bf;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.18);
+}
+
+.edu-line {
+  width: 1px;
+  flex: 1;
+  background: rgba(45, 212, 191, 0.15);
+  margin-top: 5px;
+}
+
+.edu-degree {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 0 0 4px;
+  line-height: 1.35;
+}
+
+.edu-institution {
+  font-size: 0.76rem;
+  color: #2dd4bf;
+  font-weight: 500;
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+
+.edu-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.73rem;
+  color: #475569;
+  flex-wrap: wrap;
+}
+
+.edu-period-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #334155;
+}
+
+.edu-ongoing {
+  padding: 1px 8px;
+  border-radius: 100px;
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.25);
+  color: #2dd4bf;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+/* Skills bars */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-label {
+  font-size: 0.83rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.skill-pct {
+  font-size: 0.75rem;
+  color: #2dd4bf;
+  font-weight: 600;
+}
+
+.skill-track {
+  height: 5px;
+  border-radius: 100px;
+  background: rgba(45, 212, 191, 0.08);
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #0891b2, #2dd4bf);
+  transform-origin: left;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1050px) {
+  .about__layout { grid-template-columns: 1fr; }
+  .profile-card  { max-width: 360px; margin: 0 auto; width: 100%; }
+  .interests-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .interests-grid { grid-template-columns: repeat(2, 1fr); }
+  .about__bottom  { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .about { padding: 80px 16px; }
+  .bio-card { padding: 22px 18px; }
+  .interests-card { padding: 20px 16px; }
+  .interests-grid { grid-template-columns: 1fr 1fr; }
+  .edu-card, .skills-card { padding: 18px 16px; }
+}

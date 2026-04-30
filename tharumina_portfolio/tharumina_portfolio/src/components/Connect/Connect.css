@@ -1,0 +1,246 @@
+.connect {
+  padding: 100px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.connect__bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(20, 184, 166, 0.08) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.connect__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header ── */
+.connect__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.connect__title {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: #14b8a6;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.connect__title-line {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #14b8a6, #0ea5e9);
+  border-radius: 2px;
+  margin: 0 auto 20px;
+}
+
+.connect__sub {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 480px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* ── Two-column grid ── */
+.connect__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ── Shared card base ── */
+.connect__info-card,
+.connect__form-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 36px 32px;
+  backdrop-filter: blur(12px);
+}
+
+.connect__card-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #14b8a6;
+  margin: 0 0 28px;
+}
+
+/* ── Contact info items ── */
+.connect__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.connect__info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.connect__info-item:hover {
+  background: rgba(20, 184, 166, 0.05);
+  border-color: rgba(20, 184, 166, 0.2);
+}
+
+.connect__info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.connect__info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.connect__info-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #475569;
+}
+
+.connect__info-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.connect__info-link {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.connect__info-link:hover {
+  color: #14b8a6;
+}
+
+/* ── Form ── */
+.connect__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.connect__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.connect__label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #64748b;
+}
+
+.connect__input,
+.connect__textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.25s, background 0.25s;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.connect__input::placeholder,
+.connect__textarea::placeholder {
+  color: #334155;
+}
+
+.connect__input:focus,
+.connect__textarea:focus {
+  border-color: rgba(20, 184, 166, 0.4);
+  background: rgba(20, 184, 166, 0.04);
+}
+
+/* ── Submit button ── */
+.connect__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  background: linear-gradient(90deg, #14b8a6, #0ea5e9);
+  color: #fff;
+  letter-spacing: 0.02em;
+  transition: opacity 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.25);
+  margin-top: 4px;
+}
+
+.connect__btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 6px 28px rgba(20, 184, 166, 0.4);
+}
+
+.connect__btn--sent {
+  background: linear-gradient(90deg, #16a34a, #14b8a6);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .connect__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect {
+    padding: 72px 16px;
+  }
+
+  .connect__info-card,
+  .connect__form-card {
+    padding: 28px 20px;
+  }
+
+  .connect__title {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,264 @@
+.projects {
+  padding: 100px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Ambient glows ── */
+.projects__glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.projects__glow--left {
+  top: 10%;
+  left: -200px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+}
+
+.projects__glow--right {
+  bottom: 10%;
+  right: -200px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+}
+
+.projects__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header ── */
+.projects__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #f1f5f9;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.projects__title-line {
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* ── Grid ── */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ── Card ── */
+.project-card {
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(59, 130, 246, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ── Image area ── */
+.project-card__image-wrap {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  background: rgba(10, 15, 30, 0.9);
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+}
+
+.project-card:hover .project-card__image {
+  transform: scale(1.07);
+}
+
+.project-card__image-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(160deg, rgba(15, 23, 42, 0.95) 0%, rgba(10, 15, 30, 0.98) 100%);
+  color: #334155;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+}
+
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 35%, rgba(10, 15, 30, 0.85) 100%);
+  pointer-events: none;
+}
+
+/* Shine sweep on hover */
+.project-card__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.04) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  transition: transform 0s;
+  pointer-events: none;
+}
+
+.project-card:hover .project-card__shine {
+  transform: translateX(100%);
+  transition: transform 0.7s ease;
+}
+
+/* ── Card body ── */
+.project-card__body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.project-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.project-card__desc {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: #64748b;
+  margin: 0;
+  flex: 1;
+}
+
+/* ── Tags ── */
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tag {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  color: #60a5fa;
+  letter-spacing: 0.03em;
+  cursor: default;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.project-tag:hover {
+  background: rgba(37, 99, 235, 0.18);
+  border-color: rgba(59, 130, 246, 0.45);
+  color: #93c5fd;
+}
+
+/* ── Action buttons ── */
+.project-card__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.project-btn--primary {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  flex: 1;
+  justify-content: center;
+}
+
+.project-btn--primary:hover {
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.5);
+}
+
+.project-btn--ghost {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  padding: 10px 18px;
+}
+
+.project-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #e2e8f0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects {
+    padding: 72px 16px;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card__body {
+    padding: 22px 20px;
+  }
+}
