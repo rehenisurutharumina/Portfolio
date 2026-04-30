@@ -119,7 +119,7 @@ export default function Hero() {
 
           {/* Replace with your actual image */}
           <img
-            src="/images/Profile.jpg"
+            src="/images/profile.jpg"
             alt="A V G R Tharumina"
             className="hero__image"
           />
