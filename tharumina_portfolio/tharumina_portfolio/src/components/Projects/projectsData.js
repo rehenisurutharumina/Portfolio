@@ -1,0 +1,192 @@
+// All project data — ordered by priority (strongest first)
+// Filter categories: 'all', 'fullstack', 'iot', 'devops', 'parallel', 'gamedev'
+
+export const FILTER_TABS = [
+  { key: 'all',       label: 'All' },
+  { key: 'fullstack', label: 'Full Stack' },
+  { key: 'iot',       label: 'IoT' },
+  { key: 'devops',    label: 'DevOps' },
+  { key: 'parallel',  label: 'Parallel Computing' },
+  { key: 'gamedev',   label: 'Game Dev' },
+];
+
+const projects = [
+  {
+    id: 1,
+    title: 'PathFinder',
+    category: 'Career Platform / Full Stack Application',
+    filters: ['fullstack', 'devops'],
+    description:
+      'A career and company-student platform with separate admin, company, and student flows, deployed with a Vercel frontend, Dockerized backend, and Azure SQL database.',
+    image: '/images/pathfinder.png',
+    tags: ['React', 'ASP.NET Core', 'Azure SQL', 'Docker', 'Vercel', 'Jira'],
+    features: [
+      'Student, company & admin workflows',
+      'Career opportunity management',
+      'Frontend deployed on Vercel',
+      'Docker-based backend deployment',
+      'Azure SQL database integration',
+      'Agile project management using Jira',
+    ],
+    github: 'https://github.com/rehenisurutharumina',
+    demo: 'https://pathfinder-frontend-navy.vercel.app/',
+  },
+  {
+    id: 2,
+    title: 'Hotel Management System',
+    category: 'Full Stack Web Application',
+    filters: ['fullstack'],
+    description:
+      'A hotel management system developed using React, Spring Boot, and MySQL with REST API integration for managing hotel-related operations.',
+    image: '/images/palmbeach.png',
+    tags: ['React', 'Spring Boot', 'MySQL', 'REST API'],
+    features: [
+      'React frontend',
+      'Spring Boot REST APIs',
+      'MySQL database integration',
+      'Hotel data management',
+      'Frontend/backend API communication',
+    ],
+    github: '#',
+    demo: 'https://frontend-palmbeachresort.vercel.app/',
+  },
+  {
+    id: 3,
+    title: 'Unity 3D NavMesh Project',
+    category: 'Game Development / AI Navigation',
+    filters: ['gamedev'],
+    description:
+      'A Unity 3D project focused on AI navigation and pathfinding using Unity NavMesh, graph extraction, and C# scripting.',
+    image: '/images/unity.png',
+    tags: ['Unity', 'C#', 'NavMesh'],
+    features: [
+      'Unity NavMesh navigation',
+      'AI pathfinding',
+      'Graph extraction from NavMesh',
+      'Agent movement',
+      'C# scripting',
+    ],
+    github: '#',
+    demo: 'https://drive.google.com/file/d/1OJQtg-zvaIeWcsni2qodaVrLOzmK6yvJ/view?usp=drive_link',
+  },
+  {
+    id: 4,
+    title: 'Banking Web Application',
+    category: 'Full Stack Web Application',
+    filters: ['fullstack', 'devops'],
+    description:
+      'A secure banking web application with login, registration, role-based access control, JWT authentication, SQL database integration, and Docker deployment preparation.',
+    image: '/images/banking-demo.webp',
+    tags: ['React', 'ASP.NET Core', 'SQL', 'JWT', 'Docker'],
+    features: [
+      'User registration & login',
+      'JWT authentication',
+      'Role-based access control',
+      'SQL database integration',
+      'API-based frontend/backend communication',
+      'Docker/deployment preparation',
+    ],
+    github: '#',
+    demo: 'https://rehenisurutharumina.github.io/Banking-web-application/',
+  },
+  {
+    id: 5,
+    title: 'ESP32 Telecom Tower Monitoring',
+    category: 'IoT / Full Stack Monitoring System',
+    filters: ['iot', 'fullstack'],
+    description:
+      'An IoT-based telecom tower monitoring system using ESP32 sensors to track temperature, humidity, battery voltage, smoke level, and door status with a React dashboard and ASP.NET Core backend.',
+    image: '/images/telecom-screenshot.png',
+    tags: ['ESP32', 'Arduino C/C++', 'React', 'ASP.NET Core', 'SQL'],
+    features: [
+      'ESP32 sensor data collection',
+      'Temperature & humidity monitoring',
+      'Battery voltage monitoring',
+      'Smoke & door status detection',
+      'Backend API for sensor data',
+      'React dashboard for tower monitoring',
+    ],
+    github: '#',
+    demo: null,
+  },
+  {
+    id: 6,
+    title: 'GreenLeaf Tea Factory System',
+    category: 'Enterprise Management System',
+    filters: ['fullstack'],
+    description:
+      'A tea factory management system built with ASP.NET Core Web API, TypeScript frontend, SQL database, Entity Framework, and JWT authentication.',
+    image: '/images/greenleaf-screenshot.png',
+    tags: ['ASP.NET Core', 'TypeScript', 'SQL', 'EF Core', 'JWT'],
+    features: [
+      'Secure authentication',
+      'JWT-based protected APIs',
+      'Entity Framework database handling',
+      'SQL database integration',
+      'TypeScript-based frontend',
+    ],
+    github: 'https://github.com/rehenisurutharumina',
+    demo: 'https://greenleaf-teafactory-project-fronte.vercel.app/',
+  },
+  {
+    id: 7,
+    title: 'Parallel Computing – Jacobi 2D',
+    category: 'Parallel Computing / Performance Analysis',
+    filters: ['parallel'],
+    description:
+      'A parallel computing project simulating 2D heat diffusion using the Jacobi iterative method, comparing Serial, OpenMP, MPI, and CUDA implementations.',
+    image: '/images/jacobi.png',
+    video: '/videos/assignment-03.mp4',
+    tags: ['C/C++', 'OpenMP', 'MPI', 'CUDA'],
+    features: [
+      'Serial implementation',
+      'OpenMP shared-memory parallelization',
+      'MPI distributed-memory implementation',
+      'CUDA GPU implementation',
+      'Runtime & speedup comparison',
+      'Performance analysis presentation',
+    ],
+    github: '#',
+    demo: '/videos/assignment-03.mp4',
+  },
+  {
+    id: 8,
+    title: 'Aquamate – Smart Watering System',
+    category: 'IoT / Embedded System',
+    filters: ['iot'],
+    description:
+      'An Arduino-based smart agriculture system that automatically waters plants based on soil moisture sensor readings.',
+    image: '/images/aquamate.png',
+    tags: ['Arduino', 'Arduino C/C++', 'Soil Moisture Sensor', 'Relay Module'],
+    features: [
+      'Soil moisture detection',
+      'Automatic water pump control',
+      'Sensor-based decision making',
+      'Smart agriculture automation',
+      'Embedded system programming',
+    ],
+    github: '#',
+    demo: null,
+  },
+  {
+    id: 9,
+    title: 'ASE Tool',
+    category: 'Software Engineering Tool',
+    filters: ['fullstack'],
+    description:
+      'A software engineering support tool designed to assist with requirement handling, documentation, system design, and project analysis.',
+    image: '/images/asetool.png',
+    tags: ['React', 'ASP.NET Core', 'SQL', 'GitHub'],
+    features: [
+      'Requirement management',
+      'Software documentation support',
+      'System design support',
+      'Project analysis',
+      'Report generation',
+    ],
+    github: '#',
+    demo: null,
+  },
+];
+
+export default projects;
