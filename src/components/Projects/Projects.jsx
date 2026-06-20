@@ -60,14 +60,25 @@ function ProjectCard({ project, index, inView }) {
       {(project.video || project.image) && (
         <div className="project-card__image-wrap">
           {project.video ? (
-            <video
-              src={project.video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="project-card__image"
-            />
+            project.video.includes('drive.google.com') ? (
+              <iframe
+                src={project.video}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="project-card__image"
+                style={{ border: 'none' }}
+                title={`${project.title} demo video`}
+              />
+            ) : (
+              <video
+                src={project.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="project-card__image"
+              />
+            )
           ) : (
             <img
               src={project.image}

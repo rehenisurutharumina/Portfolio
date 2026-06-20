@@ -14,18 +14,38 @@ export default function Connect() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Replace with your actual form submission logic (e.g. EmailJS, Formspree)
-    setStatus('sent');
+    setStatus('sending');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xlgkqkag', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus('sent');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   const contactItems = [
     {
       icon: <FiMail size={20} />,
       label: 'EMAIL',
-      value: 'your@email.com',
-      href: 'mailto:your@email.com',
+      value: 'rehenisurutharumina1@gmail.com',
+      href: 'mailto:rehenisurutharumina1@gmail.com',
       iconBg: 'linear-gradient(135deg, #be185d, #9333ea)',
     },
     {
@@ -153,12 +173,13 @@ export default function Connect() {
 
               <motion.button
                 type="submit"
-                className={`connect__btn ${status === 'sent' ? 'connect__btn--sent' : ''}`}
+                className={`connect__btn ${status === 'sent' ? 'connect__btn--sent' : ''} ${status === 'error' ? 'connect__btn--error' : ''}`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
+                disabled={status === 'sending'}
               >
                 <FiSend size={16} />
-                {status === 'sent' ? 'Message Sent!' : 'Send Message'}
+                {status === 'sending' ? 'Sending...' : status === 'sent' ? 'Message Sent!' : status === 'error' ? 'Failed! Try Again' : 'Send Message'}
               </motion.button>
             </form>
           </motion.div>

@@ -28,7 +28,7 @@ const projects = [
       'Azure SQL database integration',
       'Agile project management using Jira',
     ],
-    github: 'https://github.com/rehenisurutharumina',
+    github: 'https://github.com/rehenisurutharumina/PathFinder_frontend',
     demo: 'https://pathfinder-frontend-navy.vercel.app/',
   },
   {
@@ -47,7 +47,7 @@ const projects = [
       'Hotel data management',
       'Frontend/backend API communication',
     ],
-    github: '#',
+    github: 'https://github.com/rehenisurutharumina/Hotel-Management-System-Frontend',
     demo: 'https://frontend-palmbeachresort.vercel.app/',
   },
   {
@@ -58,6 +58,7 @@ const projects = [
     description:
       'A Unity 3D project focused on AI navigation and pathfinding using Unity NavMesh, graph extraction, and C# scripting.',
     image: '/images/unity.png',
+    video: 'https://drive.google.com/file/d/1OJQtg-zvaIeWcsni2qodaVrLOzmK6yvJ/preview',
     tags: ['Unity', 'C#', 'NavMesh'],
     features: [
       'Unity NavMesh navigation',
@@ -86,7 +87,7 @@ const projects = [
       'API-based frontend/backend communication',
       'Docker/deployment preparation',
     ],
-    github: '#',
+    github: 'https://github.com/rehenisurutharumina/Banking-web-application',
     demo: 'https://rehenisurutharumina.github.io/Banking-web-application/',
   },
   {
@@ -106,7 +107,7 @@ const projects = [
       'Backend API for sensor data',
       'React dashboard for tower monitoring',
     ],
-    github: '#',
+    github: 'https://github.com/rehenisurutharumina/telecom-tower-iot-monitoring-system',
     demo: null,
   },
   {
@@ -125,7 +126,7 @@ const projects = [
       'SQL database integration',
       'TypeScript-based frontend',
     ],
-    github: 'https://github.com/rehenisurutharumina',
+    github: 'https://github.com/rehenisurutharumina/Greenleaf_teafactory_project_frontend',
     demo: 'https://greenleaf-teafactory-project-fronte.vercel.app/',
   },
   {
@@ -136,7 +137,7 @@ const projects = [
     description:
       'A parallel computing project simulating 2D heat diffusion using the Jacobi iterative method, comparing Serial, OpenMP, MPI, and CUDA implementations.',
     image: '/images/jacobi.png',
-    video: '/videos/assignment-03.mp4',
+    video: 'https://drive.google.com/file/d/1nJ23YD4aJqxvldFA-L7BpRA1H6NdHJFM/preview',
     tags: ['C/C++', 'OpenMP', 'MPI', 'CUDA'],
     features: [
       'Serial implementation',
@@ -147,7 +148,7 @@ const projects = [
       'Performance analysis presentation',
     ],
     github: '#',
-    demo: '/videos/assignment-03.mp4',
+    demo: 'https://drive.google.com/file/d/1nJ23YD4aJqxvldFA-L7BpRA1H6NdHJFM/view?usp=drive_link',
   },
   {
     id: 8,

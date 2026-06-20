@@ -47,7 +47,7 @@ export default function Footer() {
   const contactLinks = [
     { label: 'GitHub', href: 'https://github.com/rehenisurutharumina' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/rehenisuru-tharumina-182642374/' },
-    { label: 'Email Me', href: 'mailto:your@email.com' },
+    { label: 'Email Me', href: 'mailto:rehenisurutharumina1@gmail.com' },
   ];
 
   return (
@@ -99,7 +99,7 @@ export default function Footer() {
                 <FiLinkedin size={18} />
               </a>
               <a
-                href="mailto:your@email.com"
+                href="mailto:rehenisurutharumina1@gmail.com"
                 className="footer-icon-btn"
                 aria-label="Email"
               >
